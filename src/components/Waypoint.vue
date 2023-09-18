@@ -57,7 +57,7 @@ export default {
     },
 
     mounted() {
-        console.log('mounted, yee-haw!', this.waypoint)
+        //console.log('mounted, yee-haw!', this.waypoint)
         this.marker = this.symbol.slice(-6)
 
         for (const orbital of this.orbitals) {

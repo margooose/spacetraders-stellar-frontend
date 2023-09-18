@@ -23,17 +23,23 @@ export default {
         getIcon() {
             switch(this.waypoint.type) {
                 case 'PLANET':
-                    return 'background-image: url(src/assets/64x_habitable_planet.jpg)'
+                    return 'wds-planet'
+                    //return 'background-image: url(../assets/64x_habitable_planet.jpg)'
                 case 'GAS_GIANT':
-                    return 'background-image: url(src/assets/32x_gas_giant.png)'
+                    return 'wds-gas-giant'
+                    //return 'background-image: url(../assets/32x_gas_giant.png)'
                 case 'ASTEROID_FIELD':
-                    return 'background-image: url(src/assets/32x_asteroid_field.png)'
+                    return 'wds-asteroid-field'
+                    //return 'background-image: url(../assets/32x_asteroid_field.png)'
                 case 'JUMP_GATE':
-                    return 'background-image: url(src/assets/16x_jump_gate.png)'
+                    return 'wds-jump-gate'
+                    //return 'background-image: url(../assets/16x_jump_gate.png)'
                 case 'MOON':
-                    return 'background-image: url(src/assets/16x_colonized_moon.jpg)'
+                    return 'wds-moon'
+                    //return 'background-image: url(../assets/16x_colonized_moon.jpg)'
                 case 'ORBITAL_STATION':
-                    return 'background-image: url(src/assets/16x_orbital_station.jpg)'
+                    return 'wds-orbital-station'
+                    //return 'background-image: url(../assets/16x_orbital_station.jpg)'
             }
         },
         shipDebugDropdownSymbol() {
@@ -497,6 +503,7 @@ export default {
               
         },
 
+
         async moveShip() {
             //let options //options and movement_type gets changed based on move_type
 
@@ -571,6 +578,7 @@ export default {
         clearSelectedWaypoint() {
             this.appStore.clickedWaypoint = []
         },
+
 
         async orbitShip() {
             const options = {
@@ -809,9 +817,9 @@ export default {
 <template>
     <div v-if="this.appStore.openedWaypoint != false" @click="keepWaypointInfoOpen" v-clickOutside="closeWaypointInfo" id="waypoint-info-container">
         <div id="waypoint-info-tab-list">
-            <div class="waypoint-info-tab" @click="openWaypointMainTab" :style="getIcon"></div>
-            <div v-if="hasMarket" @click="openMarketTab" class="waypoint-info-tab" style="background-image: url(src/assets/16x_market_icon.png);"></div>
-            <div v-if="hasShipyard" @click="openShipyardTab" class="waypoint-info-tab" style="background-image: url(src/assets/16x_shipyard_icon.png);"></div>
+            <div class="waypoint-info-tab" @click="openWaypointMainTab" :class="getIcon"></div>
+            <div v-if="hasMarket" @click="openMarketTab" class="waypoint-info-tab wds-market"></div>
+            <div v-if="hasShipyard" @click="openShipyardTab" class="waypoint-info-tab wds-shipyard"></div>
         </div>
         <div v-if="waypointInfoIsSelected" class="waypoint-information" id="waypoint-info-main">
             <div id="waypoint-info-left">
@@ -1600,5 +1608,36 @@ export default {
 }
 .ship-info-debug-title{
     cursor: pointer;
+}
+
+
+
+
+
+.wds-market{
+    background-image: url(../assets/16x_market_icon.png);
+}
+.wds-shipyard{
+    background-image: url(../assets/16x_shipyard_icon.png);
+}
+
+.wds-planet{
+    background-image: url(../assets/64x_habitable_planet.jpg);
+}
+.wds-jump-gate{
+    background-image: url(../assets/16x_jump_gate.png)
+}
+.wds-gas-giant{
+    background-image: url(../assets/32x_gas_giant.png)
+}
+.wds-asteroid-field{
+    background-image: url(../assets/32x_asteroid_field.png);
+}
+
+.wds-moon{
+    background-image: url(../assets/16x_colonized_moon.jpg)
+}
+.wds-orbital-station{
+    background-image: url(../assets/16x_orbital_station.jpg);
 }
 </style>

@@ -311,7 +311,7 @@ export default {
             } else {
                 this.shipIsInSystem = false
             }
-            console.log('is in system?', this.shipIsInSystem)
+            //console.log('is in system?', this.shipIsInSystem)
         }
     },
 
