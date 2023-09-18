@@ -1,0 +1,16 @@
+// symbol: MARCOOS
+// account id: cljafw2sb013bs60c5qrmhal5
+
+bugs: [
+    you can't selected one ship, and then another ship - you have to deselect your first ship first
+    you can't move to the barycenter (though this is more of an issue that hasn't been implemented yet)
+    you can't click select a moon, and then change your mind and select its parent planet
+    after a ship moves, it remains 'in orbit' on the waypoint data screen
+]
+
+things to do if i revisit this: [
+    changing ship mounts isn't actually supported
+]
+
+/* token:
+eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZGVudGlmaWVyIjoiTUFSQ09PUyIsInZlcnNpb24iOiJ2MiIsInJlc2V0X2RhdGUiOiIyMDIzLTA5LTE2IiwiaWF0IjoxNjk0ODgyNjAxLCJzdWIiOiJhZ2VudC10b2tlbiJ9.oTtC2No2aV0xOxu9TMM_NbTW45dmXHrmE0VXgRgfRL47Nsum8nK2cdziF9cErmsg-jtn58jBbK9YpGYg8bqrgu8MKlyukaVy54oTqoPdJBMDUpB_w4FAd_zuPBdGbp6efan_-T-IcLx-CpLn0pJvfT0WtsrF3SCV1Isv94uIQvY36O67E3H9hvq-A6qIqiGejJDqICY6Q68kJTKCNbdwVrkeDAxbrFjMlytVJV2czMjtDXcrWfLbXMOS-fnHciAPyMDcoj2MasIwAhPQiZoT1H7Z8A9YRNSwQxehkcLv-iTqMk0cWgIsrRvN4s6a8XT9QRyh2oZrDT85qB1istuMNw
